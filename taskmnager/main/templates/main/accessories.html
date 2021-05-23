@@ -1,0 +1,115 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+{% block title %}
+Аксессуары
+{% endblock %}
+
+{% block link %}
+<link rel="stylesheet" type="text/css"
+	  href="{% static 'css/forAllCategories.css' %}">
+<link rel="stylesheet" type="text/css"
+	  href="{% static 'css/sale.css' %}">
+{% endblock %}
+
+{% block content %}
+    <!--КАРТОЧКИ-->
+	<section class="top15">
+		<div class="container">
+			<h2>АКСУССУАРЫ</h2>
+			<hr width="100%" color="#dbbeb6"  size="3" align="center">
+
+			<!--1-->
+			<div class="firstLine">
+				<div class="dressCard">
+					<img src="{% static 'img/ac1.jpg' %}" alt="Photo" class="topPhoto">
+				  	<div class="topText">
+				  		<a href="/katalog/svadebnyye-platya/atlasnoe-plate-ne-bretelkakh-s-keypom/" class="nameOfDress"><p>Гребень<br>с объемным декором</p></a>
+				        <p class="article">Арт. AC 001</p>
+				        <p class="price">105 р.</p>
+				  	</div>
+				</div>
+
+				<div class="dressCard">
+					<img src="{% static 'img/ac2.jpg' %}" alt="Photo" class="topPhoto">
+				  	<div class="topText">
+				  		<a href="/katalog/svadebnyye-platya/atlasnoe-plate-ne-bretelkakh-s-keypom/" class="nameOfDress"><p>Украшение<br>для свадебной прически</p></a>
+				        <p class="article">Арт. AC 002</p>
+				        <p class="price">120 р.</p>
+				  	</div>
+				</div>
+
+				<div class="dressCard">
+					<img src="{% static 'img/ac3.jpg' %}" alt="Photo" class="topPhoto">
+				  	<div class="topText">
+				  		<a href="/katalog/svadebnyye-platya/atlasnoe-plate-ne-bretelkakh-s-keypom/" class="nameOfDress"><p>Объемное украшение<br>в прическу</p></a>
+				        <p class="article">Арт. AC 003</p>
+				        <p class="price">115 р.</p>
+				  	</div>
+				</div>
+			</div>
+
+		    <!--2-->
+		    <div class="firstLine">
+
+				<div class="dressCard">
+				  	<img src="{% static 'img/ac5.jpg' %}" alt="Photo" class="topPhoto">
+				  	<div class="topText">
+				  		<a href="/katalog/svadebnyye-platya/atlasnoe-plate-ne-bretelkakh-s-keypom/" class="nameOfDress"><p>Гребень<br>для волос</p></a>
+				        <p class="article">Арт. AC 004</p>
+				        <p class="price">100 р.</p>
+				  	</div>
+				</div>
+
+				<div class="dressCard">
+					<img src="{% static 'img/ac6.jpg' %}" alt="Photo" class="topPhoto">
+				  	<div class="topText">
+				  		<a href="/katalog/svadebnyye-platya/atlasnoe-plate-ne-bretelkakh-s-keypom/" class="nameOfDress"><p>Нежное украшение<br>в волосы</p></a>
+				        <p class="article">Арт. AC 005</p>
+				        <p class="price">107 р.</p>
+				  	</div>
+				</div>
+
+				<div class="dressCard">
+			  		<img src="{% static 'img/ac4.jpg' %}" alt="Photo" class="topPhoto">
+				  	<div class="topText">
+				  		<a href="/katalog/svadebnyye-platya/atlasnoe-plate-ne-bretelkakh-s-keypom/" class="nameOfDress"><p>Свадебная веточка<br>для волос</p></a>
+				        <p class="article">Арт. AC 006</p>
+				        <p class="price">95 р.</p>
+				    </div>
+		        </div>
+			</div>
+
+			 <!--3-->
+			<div class="firstLine">
+				<div class="dressCard">
+					<img src="{% static 'img/ac7.jpg' %}" alt="Photo" class="topPhoto type2">
+				  	<div class="topText">
+				  		<a href="/katalog/svadebnyye-platya/atlasnoe-plate-ne-bretelkakh-s-keypom/" class="nameOfDress"><p>Ободок<br>декорированный цветами</p></a>
+				        <p class="article">Арт. AC 007</p>
+				        <p class="price">120 р.</p>
+				  	</div>
+				</div>
+
+				<div class="dressCard">
+					<img src="{% static 'img/ac8.jpg' %}" alt="Photo" class="topPhoto">
+				  	<div class="topText">
+				  		<a href="/katalog/svadebnyye-platya/atlasnoe-plate-ne-bretelkakh-s-keypom/" class="nameOfDress"><p>Объемные серьги<br>в форме цветов</p></a>
+				        <p class="article">Арт. AC 008</p>
+				        <p class="price">90 р.</p>
+				  	</div>
+				</div>
+
+				<div class="dressCard">
+					<img src="{% static 'img/ac009.jpg' %}" alt="Photo" class="topPhoto">
+				  	<div class="topText">
+				  		<a href="/katalog/svadebnyye-platya/atlasnoe-plate-ne-bretelkakh-s-keypom/" class="nameOfDress"><p>Веточка для волос<br>с кристаллами</p></a>
+				        <p class="article">Арт. AC 009</p>
+				        <p class="price">119 р.</p>
+				  	</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}

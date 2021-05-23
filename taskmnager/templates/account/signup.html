@@ -1,0 +1,23 @@
+{% extends "account/base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Signup" %}{% endblock %}
+
+{% block content %}
+<section class="container">
+  <h1>{% trans "Sign Up" %}</h1>
+
+<p >{% blocktrans %}Вы уже зарегистрированы?<a href="{{ login_url }}"style="color: #dbbeb6; margin-left: 10px;">Войдите</a>.{% endblocktrans %}</p>
+
+<form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+  {% csrf_token %}
+  {{ form.as_p }}
+  {% if redirect_field_value %}
+  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+  {% endif %}
+  <button type="submit" style="color: #dbbeb6; border: 1px solid #000000">{% trans "Sign Up" %} &raquo;</button>
+</form>
+</section>
+
+{% endblock %}

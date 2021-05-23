@@ -1,0 +1,31 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+{% block title %}
+О нас
+{% endblock %}
+
+{% block link %}
+<link rel="stylesheet" type="text/css"
+	  href="{% static 'css/contacts.css' %}">
+
+<link rel="stylesheet" type="text/css"
+	  href="{% static 'css/about.css' %}">
+{% endblock %}
+
+{% block content %}
+    <section class="slider">
+		<div class="search-bar w3layouts-newsletter"></div>
+        <h3 class="sear-head editContent">Поиск свадебного платья</h3>
+        <form action="{% url 'search' %}" method="get" class="d-flex editContent">
+            <input type="search" placeholder="Введите название свадебного платья" name="search" class="form-control" required="">
+            <button class="btn1 btn" type="submit">
+                <span class="fa fa-search" aria-hiden="true"></span>
+            </button>
+        </form>
+	</section>
+{% endblock %}
+
+
+

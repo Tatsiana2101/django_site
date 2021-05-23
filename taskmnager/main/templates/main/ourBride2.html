@@ -1,0 +1,58 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+{% block title %}
+Свадебные платья
+{% endblock %}
+
+{% block link %}
+<link rel="stylesheet" type="text/css"
+	  href="{% static 'css/forAllCategories.css' %}">
+<link rel="stylesheet" type="text/css"
+	  href="{% static 'css/sale.css' %}">
+
+{% endblock %}
+
+{% block content %}
+
+    <!--КАРТОЧКИ-->
+	<section class="top15">
+		<div class="container">
+			<h2>СВАДЕБНЫЕ ПЛАТЬЯ</h2>
+			<hr width="100%" color="#dbbeb6"  size="3" align="center">
+
+			<!--1-->
+			<div class="firstLine">
+
+				<div class="dressCard">
+					<img src="{% static 'img/dress2.jpg' %}" alt="Photo" class="topPhoto">
+				  	<div class="topText">
+				  		<a href="product/1" class="nameOfDress"><p>Пышное атласное свадебное платье<br>с вырезом в форме сердца</p></a>
+				        <p class="article">Арт. NR 2210</p>
+				        <p class="price">4 875 р.</p>
+				  	</div>
+				</div>
+
+                <div class="dressCard">
+					<img src="{% static 'img/p15.jpg' %}" alt="Photo" class="topPhoto">
+				  	<div class="topText">
+				  		<a href="product/34" class="nameOfDress"><p>Декольтированное свадебное<br>платье трансформер</p></a>
+				        <p class="article">Арт. NR 2200</p>
+				        <p class="price">5 190 р.</p>
+				    </div>
+				</div>
+
+				<div class="dressCard">
+					<img src="{% static 'img/dress8.jpg' %}" alt="Photo" class="topPhoto">
+				  	<div class="topText">
+				  		<a href="product/41" class="nameOfDress"><p>Сверкающее свадебное платье <br>с открытым верхом</p></a>
+				        <p class="article">Арт. NR 21012</p>
+				        <p class="price">3 670 р.</p>
+				  	</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+{% endblock %}

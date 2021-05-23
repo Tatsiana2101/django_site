@@ -1,0 +1,52 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+{% block title %}
+{{ accessories.name }}
+{% endblock %}
+
+{% block link %}
+	<link rel="stylesheet" type="text/css"
+	  href="{% static 'css/owl.carousel.min.css' %}">
+	<link rel="stylesheet" type="text/css"
+	  href="{% static 'css/owl.theme.default.min.css' %}">
+	<link rel="stylesheet" type="text/css"
+	  href="{% static 'css/ownPage.css' %}">
+{% endblock %}
+
+{% block content %}
+
+	 <section class="ownInformation">
+		<div class="container">
+			<div class="ownPage">
+				<div class="ownPhoto">
+					<div id="sliderFade" class="carousel slide carousel-fade" data-ride="carousel">
+						<img src="{{ accessories.image1.url }}" class="d-block w-100" alt="...">
+					</div>
+				</div>
+				<!-- PART 2-->
+				<div class="ownText">
+						<p class="ownName" style="text-transform: uppercase">{{ accessories.name }}</p>
+						<p class="ownArticle"><span class="ownArticleNomber">АРТИКУЛ:</span>{{ accessories.article }}</p>
+						<hr width="100%" color="#dbbeb6"  size="3px" align="left">
+						<div class="priceButton">
+							<p class="ownPrice ownArticleNomber">Цена: {{ accessories.price }} р.</p>
+							<p class="moveBtn">
+								<a href="https://n527869.yclients.com/" class="btn btnMove" STYLE="width: 300px">
+									<img src="{% static 'img/вешалка33.png' %}" alt="" class="vashalka">
+									ЗАПИСАТЬСЯ НА ПРИМЕРКУ</a>
+							</p>
+						</div>
+						<hr width="27.7%" color="#dbbeb6"  size="3px" align="left">
+						<div class="messengers"></div>
+						<a href="https://www.facebook.com/bsuir.by/"><img src="{% static 'img/facebook.png' %}" class="messengerIcon"></a>
+						<a href="https://www.instagram.com/bsuir_official/"><img src="{% static 'img/insta.png' %}" class="messengerIcon"></a>
+						<a href="https://twitter.com/bsuirby"><img src="{% static 'img/twitter.png' %}" class="messengerIcon"></a>
+						<a href="https://vk.com/bsuir_official"><img src="{% static 'img/vk.png' %}" class="messengerIcon"></a>
+
+					</div>
+			</div>
+		</div>
+   </section>
+{% endblock %}

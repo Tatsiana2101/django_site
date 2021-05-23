@@ -1,0 +1,35 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+{% block title %}
+Реквизиты
+{% endblock %}
+
+{% block link %}
+<link rel="stylesheet" type="text/css"
+	  href="{% static 'css/contacts.css' %}">
+<link rel="stylesheet" type="text/css"
+	  href="{% static 'css/delivery.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="slider">
+		<div class="container-fluid">
+			<div class="one-part">
+                <p class="mainText">
+					<br><br>
+					<span class="span">
+						РЕКВИЗИТЫ
+					</span>
+					<br>
+					<br>
+					Минск, Якуба Коласа, 28, индекс 220013 <br>
+					ИП Петров Петр Петрович<br>
+					ИНН 504795634880<br>
+					ОГРН 1027700067328<br>
+                </p>
+            </div>
+		</div>
+	</section>
+{% endblock %}

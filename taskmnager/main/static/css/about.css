@@ -1,0 +1,45 @@
+.h2{
+    font-weight: 300;
+}
+
+.mainText{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+}
+.mainText2{
+    margin-top: 0px;
+    margin-bottom: 60px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.photoAbout{
+    width: 700px;
+    height: 490px;
+    display:block;
+    margin:auto;
+}
+
+.h1{
+	text-decoration: none;
+}
+
+.h1:hover {
+    color: #000000; /* Цвет ссылки при наведении на нее курсора мыши */
+    text-decoration: none;
+   }
+
+h1{
+	font-family: 'Montserrat', sans-serif;
+	display: flex;
+	justify-content: center;
+	color: #282828;
+    font-size:55px;
+    font-weight:350;
+    letter-spacing: 0.05em;
+	margin-bottom: 20px;
+}

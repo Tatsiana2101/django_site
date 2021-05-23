@@ -1,0 +1,52 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+{% block title %}
+SALE
+{% endblock %}
+
+{% block link %}
+{% endblock %}
+
+
+{% block content %}
+<!--КАРТОЧКИ-->
+
+		<div class="container">
+
+			<br>
+			<h2>SALE</h2>
+			<hr width="100%" color="#dbbeb6"  size="3" align="center">
+
+			<form action="" method="get" style="display: flex; justify-content: space-between; height: 33px">
+				{{ form.as_p }}<br>
+				<input class="btnMove" type="submit" value="Поиск" style="width: 100px;margin-left: 15px; border: 1px; margin-left: 393px; border-radius: 30%; font-size:15px; height: 32px">
+			</form>
+
+			<div class="row">
+			{% for el in sale %}
+				{% if forloop.counter0|divisibleby:3 %}
+				 </div>
+				 <div class="row">
+				{% endif %}
+					 <div class="dressCard" style="width:  32.4%">
+				  	<img src="{{ el.image1.url }}" alt="Photo" class="topPhoto">
+				  	<div class="topText">
+				  		<a href="{% url 'sale' el.id %}" class="nameOfDress"><p>{{ el.name }}</p></a>
+				        <p class="article">Арт. {{ el.article }}</p>
+				        <p style="text-align: center">
+							<div class="salePrice" style="display: flex; margin: 10px 20% 0 28%">
+					        <p class="priceOld" style="text-decoration: line-through; color: #626262; font-weight: 500; margin-right: 30px" >{{ el.priceSale }} р.</p>
+					        <p class="price salePriceNew" style="color: #ba1818; font-weight: 500">{{ el.price }} р.</p>
+				        </div>
+						</p>
+				  	</div>
+				</div>
+			{% endfor %}
+			</div>
+		</div>
+{% endblock %}
+
+
+

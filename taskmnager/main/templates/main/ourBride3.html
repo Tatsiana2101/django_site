@@ -1,0 +1,61 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+{% block title %}
+Свадебные платья
+{% endblock %}
+
+{% block link %}
+<link rel="stylesheet" type="text/css"
+	  href="{% static 'css/forAllCategories.css' %}">
+<link rel="stylesheet" type="text/css"
+	  href="{% static 'css/sale.css' %}">
+
+{% endblock %}
+
+{% block content %}
+
+    <!--КАРТОЧКИ-->
+	<section class="top15">
+		<div class="container">
+			<h2>СВАДЕБНЫЕ ПЛАТЬЯ</h2>
+			<hr width="100%" color="#dbbeb6"  size="3" align="center">
+
+			<!--1-->
+			<div class="firstLine">
+
+				<div class="dressCard">
+					<img src="{% static 'img/dress5.jpg' %}" alt="Photo" class="topPhoto">
+				  	<div class="topText">
+				  		<a href="product/6" class="nameOfDress"><p>Эффектное свадебное платье<br>с объемными рукавами</p></a>
+				        <p class="article">Арт. NR 2201</p>
+				        <p class="price">5 900 р.</p>
+				  	</div>
+				</div>
+
+               <div class="dressCard">
+					<img src="{% static 'img/s13.jpg' %}" alt="Photo" class="topPhoto">
+				  	<div class="topText">
+				  		<a href="product/26" class="nameOfDress"><p>Серебряное свадебное платье<br>с пышными рукавами</p></a>
+				        <p class="article">Арт. SCL 2002</p>
+				        <div class="salePrice">
+					        <p class="priceOld">2 890 р.</p>
+					        <p class="price salePriceNew">2 100 р.</p>
+				        </div>
+				  	</div>
+				</div>
+
+				<div class="dressCard">
+					<img src="{% static 'img/p13.jpg' %}" alt="Photo" class="topPhoto">
+				  	<div class="topText">
+				  		<a href="product/15" class="nameOfDress"><p>Закрытое свадебное платье<br>с объемными рукавами</p></a>
+				        <p class="article">Арт. NGR 9449</p>
+				        <p class="price">4 190 р.</p>
+				  	</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+{% endblock %}

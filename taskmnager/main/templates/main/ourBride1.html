@@ -1,0 +1,91 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+{% block title %}
+Свадебные платья
+{% endblock %}
+
+{% block link %}
+<link rel="stylesheet" type="text/css"
+	  href="{% static 'css/forAllCategories.css' %}">
+<link rel="stylesheet" type="text/css"
+	  href="{% static 'css/sale.css' %}">
+
+{% endblock %}
+
+{% block content %}
+
+    <!--КАРТОЧКИ-->
+	<section class="top15">
+		<div class="container">
+			<h2>СВАДЕБНЫЕ ПЛАТЬЯ</h2>
+			<hr width="100%" color="#dbbeb6"  size="3" align="center">
+
+			<!--1-->
+			<div class="firstLine">
+
+				<div class="dressCard">
+					<img src="{% static 'img/dress4.jpg' %}" alt="Photo" class="topPhoto">
+				  	<div class="topText">
+				  		<a href="product/2" class="nameOfDress"><p>Белое свадебное платье<br> со съемным кейпом</p></a>
+				        <p class="article">Арт. NR 2212</p>
+				        <p class="price">4 100 р.</p>
+				  	</div>
+				</div>
+
+                <div class="dressCard">
+			  		<img src="{% static 'img/p1.jpg' %}" alt="Photo" class="topPhoto">
+				  	<div class="topText">
+				  		<a href="product/16" class="nameOfDress"><p>Атласное платье на <br> бретельках с кейпом</p></a>
+				        <p class="article">Арт. NR 21010</p>
+				        <p class="price">5 750 р.</p>
+				    </div>
+		        </div>
+
+				<div class="dressCard">
+					<img src="{% static 'img/p6.jpg' %}" alt="Photo" class="topPhoto">
+				  	<div class="topText">
+				  		<a href="product/3" class="nameOfDress"><p>Сверкающее свадебное <br>платье рыбка</p></a>
+				        <p class="article">Арт. М 2021-07</p>
+				        <p class="price">5 350 р.</p>
+				  	</div>
+				</div>
+			</div>
+
+			 <!--2-->
+			<div class="firstLine">
+				<div class="dressCard">
+					<img src="{% static 'img/s13.jpg' %}" alt="Photo" class="topPhoto">
+				  	<div class="topText">
+				  		<a href="product/26" class="nameOfDress"><p>Серебрянное свадебное платье<br>с пышными рукавами</p></a>
+				        <p class="article">Арт. SCL 2002</p>
+				        <div class="salePrice">
+					        <p class="priceOld">2 890 р.</p>
+					        <p class="price salePriceNew">2 100 р.</p>
+				        </div>
+				  	</div>
+				</div>
+
+				<div class="dressCard">
+					<img src="{% static 'img/dress13.jpg' %}" alt="Photo" class="topPhoto">
+				  	<div class="topText">
+				  		<a href="product/27" class="nameOfDress"><p>Струящееся свадебное платье<br>с корсетом расшитым кристаллами</p></a>
+				        <p class="article">Арт. BCL 212</p>
+				        <p class="price">5 800 р.</p>
+				  	</div>
+				</div>
+
+				<div class="dressCard">
+					<img src="{% static 'img/dress12.jpg' %}" alt="Photo" class="topPhoto">
+				  	<div class="topText">
+				  		<a href="product/28" class="nameOfDress"><p>Легкое свадебное платье<br>с крылышками на плечах</p></a>
+				        <p class="article">Арт. BCL 211</p>
+				        <p class="price">3 730 р.</p>
+				  	</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+{% endblock %}

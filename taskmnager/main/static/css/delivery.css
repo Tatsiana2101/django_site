@@ -1,0 +1,38 @@
+.slider{
+    margin-bottom: 70px;
+}
+
+.h2{
+    font-weight: 300;
+}
+
+.mainText{
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.span{
+    font-weight: 600;
+}
+
+.h1{
+	text-decoration: none;
+}
+
+.h1:hover {
+    color: #000000; /* Цвет ссылки при наведении на нее курсора мыши */
+    text-decoration: none;
+   }
+
+h1{
+	font-family: 'Montserrat', sans-serif;
+	display: flex;
+	justify-content: center;
+	color: #282828;
+    font-size:55px;
+    font-weight:350;
+    letter-spacing: 0.05em;
+	margin-bottom: 20px;
+}

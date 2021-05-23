@@ -1,0 +1,42 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+{% block title %}
+Условия возврата
+{% endblock %}
+
+{% block link %}
+<link rel="stylesheet" type="text/css"
+	  href="{% static 'css/contacts.css' %}">
+<link rel="stylesheet" type="text/css"
+	  href="{% static 'css/delivery.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="slider">
+		<div class="container-fluid">
+			<div class="one-part">
+                <h2 class="h2">УСЛОВИЯ ВОЗВРАТА</h2>
+                <p class="mainText">
+					<br>
+					<span class="span">
+						УСЛОВИЯ ВОЗВРАТА ИЛИ ОБМЕНА ТОВАРА ПРИ ПОКУПКЕ В НАШЕМ МАГАЗИНЕ
+					</span>
+					<br>
+					<br>
+					Принять решение о возврате товара, купленного из наличия, можно не позднее, чем через 14 дней с момента покупки,
+					при условии сохранения товарного вида, отсутствия следов носки, сохранении заводских этикеток и кассового
+					чека.<br><br><br>
+					<span class="span">
+						УСЛОВИЯ ВОЗВРАТА ТОВАРА, КУПЛЕННОГО ОНЛАЙН
+					</span>
+					<br>
+					<br>
+					Возврат возможен не позднее, чем через 14 дней с момента получения товара.
+					Доставку возврата оплачивает покупатель.
+                </p>
+            </div>
+		</div>
+	</section>
+{% endblock %}

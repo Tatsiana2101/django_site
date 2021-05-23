@@ -1,0 +1,64 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+{% block title %}
+Свадебные платья
+{% endblock %}
+
+{% block link %}
+<link rel="stylesheet" type="text/css"
+	  href="{% static 'css/forAllCategories.css' %}">
+<link rel="stylesheet" type="text/css"
+	  href="{% static 'css/sale.css' %}">
+
+{% endblock %}
+
+{% block content %}
+
+    <!--КАРТОЧКИ-->
+	<section class="top15">
+		<div class="container">
+			<h2>СВАДЕБНЫЕ ПЛАТЬЯ</h2>
+			<hr width="100%" color="#dbbeb6"  size="3" align="center">
+
+			<!--1-->
+			<div class="firstLine">
+
+                <div class="dressCard">
+					<img src="{% static 'img/s4.jpg' %}" alt="Photo" class="topPhoto">
+				  	<div class="topText">
+				  		<a href="product/42" class="nameOfDress"><p>Свадебное платье<br>DIVINO ROSE OTILIA</p></a>
+				        <p class="article">Арт. SCL 002</p>
+				        <div class="salePrice">
+					        <p class="priceOld">3 570 р.</p>
+					        <p class="price salePriceNew">2 990 р.</p>
+				        </div>
+				  	</div>
+				</div>
+
+				<div class="dressCard">
+					<img src="{% static 'img/s9.jpg' %}" alt="Photo" class="topPhoto">
+				  	<div class="topText">
+				  		<a href="product/21" class="nameOfDress"><p>Прямое свадебное платье<br>расшитое кружевом</p></a>
+				        <p class="article">Арт. SCL 200</p>
+				        <div class="salePrice">
+					        <p class="priceOld">3 490 р.</p>
+					        <p class="price salePriceNew">2 890 р.</p>
+				        </div>
+				  	</div>
+				</div>
+
+				<div class="dressCard">
+					<img src="{% static 'img/dress20.jpg' %}" alt="Photo" class="topPhoto">
+				  	<div class="topText">
+				  		<a href="product/33" class="nameOfDress"><p>Легкое свадебное платье <br>с блестящим фатином</p></a>
+				        <p class="article">Арт. NR 21012</p>
+				        <p class="price">2 970 р.</p>
+				  	</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+{% endblock %}

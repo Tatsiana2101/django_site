@@ -1,0 +1,51 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+{% block title %}
+Фата
+{% endblock %}
+
+{% block link %}
+{% endblock %}
+
+
+{% block content %}
+<!--КАРТОЧКИ-->
+
+		<div class="container">
+
+			<br>
+			<h2>ФАТА</h2>
+			<hr width="100%" color="#dbbeb6"  size="3" align="center">
+
+			<form action="" method="get" style="display: flex; justify-content: space-between; height: 33px">
+				{{ form.as_p }}<br>
+				<input class="btnMove" type="submit" value="Поиск" style="width: 100px;margin-left: 15px; border: 1px; margin-left: 400px; border-radius: 30%; font-size:15px; height: 32px">
+			</form>
+			<div class="typeFilter" style="margin-top: 15px">
+				<a href="{% url 'type_filter5' pk=1 %}"><button style="background: #dbbeb6; border-radius: 30%; border: 1px solid #d0b5ae; margin-right: 5px">Длинные</button></a>
+				<a href="{% url 'type_filter5' pk=2 %}"><button style="background: #dbbeb6; border-radius: 30%; border: 1px solid #d0b5ae; margin-right: 5px">Короткие</button></a>
+			</div>
+
+			<div class="row">
+			{% for el in veil %}
+				{% if forloop.counter0|divisibleby:3 %}
+				 </div>
+				 <div class="row" style="padding-top: 0px">
+				{% endif %}
+					 <div class="dressCard" style="width:  32.4%; margin-top: 0px">
+				  	<img src="{{ el.image1.url }}" alt="Photo" class="topPhoto">
+				  	<div class="topText">
+				  		<a href="{% url 'veil' el.id %}" class="nameOfDress"><p>{{ el.name }}</p></a>
+				        <p class="article">Арт. {{ el.article }}</p>
+				        <p class="price">{{ el.price }} р.</p>
+				  	</div>
+				</div>
+			{% endfor %}
+			</div>
+		</div>
+{% endblock %}
+
+
+

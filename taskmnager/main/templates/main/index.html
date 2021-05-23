@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<title>Свадебный салон Nicole в Минске</title>
+	<link rel="apple-touch-icon" sizes="57x57" href="{% static 'img/apple-icon-57x57.png' %}">
+	<link rel="apple-touch-icon" sizes="60x60" href="{% static 'img/apple-icon-60x60.png' %}">
+	<link rel="apple-touch-icon" sizes="72x72" href="{% static 'img/apple-icon-72x72.png' %}">
+	<link rel="apple-touch-icon" sizes="76x76" href="{% static 'img/apple-icon-76x76.png' %}">
+	<link rel="apple-touch-icon" sizes="114x114" href="{% static 'img/apple-icon-114x114.png' %}">
+	<link rel="apple-touch-icon" sizes="120x120" href="{% static 'img/apple-icon-120x120.png' %}">
+	<link rel="apple-touch-icon" sizes="144x144" href="{% static 'img/apple-icon-144x144.png' %}">
+	<link rel="apple-touch-icon" sizes="152x152" href="{% static 'img/apple-icon-152x152.png' %}">
+	<link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/apple-icon-180x180.png' %}">
+	<link rel="icon" type="image/png" sizes="192x192"  href="{% static 'android-icon-192x192.png' %}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicon-32x32.png' %}">
+	<link rel="icon" type="image/png" sizes="96x96" href="{% static 'img/favicon-96x96.png' %}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicon-16x16.png' %}">
+	<link rel="manifest" href="{% static 'img/manifest.json' %}">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous" type="text/css" >
+
+	<link rel="stylesheet" type="text/css"
+		  href="{% static 'css/owl.carousel.min.css' %}">
+
+	<link rel="stylesheet" type="text/css"
+		  href="{% static 'css/owl.theme.default.min.css' %}">
+
+	<link rel="stylesheet" type="text/css"
+		  href="{% static 'css/main.css' %}">
+</head>
+
+<body>
+	<header class="header">
+		<div class="container-fluid">
+			<div class="row" style="display: flex">
+				<div class="col-7">м. Академия Наук, Минск, Якуба Коласа, 28</div>
+				<div class="col-2 head-align">
+					<img src="{% static 'img/whatsapp.png' %}" alt="Photo" class="contactIcon">
+					<a href="https://www.whatsapp.com/" target="_blank" class="mess">
+					WhatsApp</a>
+				</div>
+				<div class="col-1 head-align">
+					<img src="{% static 'img/viber.png' %}" alt="Photo" class="contactIcon">
+					<a href="https://www.viber.com/ru/" target="s_blank" class="mess" style="">
+				     Viber</a>
+				</div >
+				<div class="col-2"><p class="phone">+375(17)123-45-67</p></div>
+			</div>
+
+		</div>
+	</header>
+
+	<!--Регистрация-->
+	<section class="container-fluid" style="padding-right: 25px">
+		<div style="display: flex; justify-content: flex-end; margin-top: 15px">
+						{% if user.is_authenticated %}
+                        <span>{{ user.username }}</span>
+                        <a href="{% url 'account_logout' %}"
+                           style="color: #000000; font-weight: 400; text-transform: uppercase; text-decoration: none; font-size: 14px; margin-left: 10px; margin-top: 2px">
+                            Выход
+                        </a>
+                    {% else %}
+                        <a href="{% url 'account_login' %}"
+                           style="color: #000000; font-weight: 400; text-transform: uppercase; text-decoration: none; font-size: 14px;">
+                            Вход
+                        </a>
+                         <a href="{% url 'account_signup' %}"
+                           style="color: #000000; font-weight: 400; text-transform: uppercase; text-decoration: none; font-size: 14px; margin-left: 10px">
+                            Регистрация
+                        </a>
+                    {% endif %}
+					</div>
+	</section>
+
+	<!--КАТЕГОРИИ ТОВАРОВ-->
+	<section class="products">
+		<div class="container">
+			<a href="/" class="h1"><h1>NICOLE</h1></a>
+			<div class="row2">
+				<div class="product">
+						<a href="product/" class="productName">СВАДЕБНЫЕ ПЛАТЬЯ</a>
+						<a href="/product/sale_2/" class="productName sale">SALE</a>
+						<a href="/product/even_3/" class="productName">ВЕЧЕРНИЕ ПЛАТЬЯ</a>
+						<a href="/product/shoes_4/" class="productName">ОБУВЬ</a>
+						<a href="/product/veil_5/" class="productName">ФАТА</a>
+						<a href="/product/access_6/" class="productName">АКСЕССУАРЫ</a>
+						<a href="/contacts" class="productName">КОНТАКТЫ</a>
+				</div>
+				<div class="productIcon">
+					<div class="bag">
+						<a href="https://n527869.yclients.com/"><img src="{% static 'img/photo222.png' %}" alt="Photo" class="icon2"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--SALE-->
+	<section class="yourSale">
+		<img src="{% static 'img/main.jpg' %}" alt="Photo" class="mainPhoto">
+	</section>
+
+	<!--TRENDS-->
+	<section class="trends">
+		<div class="container">
+				<h2>СВАДЕБНЫЕ ТРЕНДЫ 2021</h2>
+				<p class="trendInfo">Элегантность, минимализм и индивидуальность — три кита, на которых будет держаться свадебная мода в 2021 году. Границы между подиумной и свадебной модой все сильнее размываются, и теперь невесты выбирают наряды в коллекциях ready-to-wear, haute couture, у местных дизайнеров и даже в магазинах масс-маркета. Неизменным останется лишь традиционный для свадебного образа белый цвет. В этой статье мы расскажем о главных трендах года, вдохновим вас и поделимся актуальными идеями и советами по выбору стильного образа для невест 2021-го. </p>
+				<div class="trendCards">
+
+					<div class="trendMain">
+						<img src="{% static 'img/trend1.jpg' %}" alt="Photo" class="trendPhoto1">
+						<a href="https://wedding-life.ru/preparation/decor/svadebnye-trendy-i-antitrendy-v-2021-godu" class="trTx1">Модные свадебные тренды 2021 от российских дизайнеров. Самый полный гид <br>
+						</a>
+						<span class="sp1">Все, что нужно знать стильной невесте до свадьбы</span>
+					</div>
+
+					<div class="trendsThree">
+						<div class="trend">
+							<img src="{% static 'img/ttt1.png' %}" alt="Photo" class="trendPhoto">
+							<a href="https://the-wedding.ru/111039-kakoe-svadebnoe-plate-vybrat-v-2021-godu-12-goryachikh-trendov/" class="text4">Какое свадебное платье выбрать в 2021 году: 12 горячих трендов <br>
+								<p class="link4">the-wedding.ru</p></a>
+						</div>
+						<div class="trend">
+							<img src="{% static 'img/tt2.png' %}" alt="Photo" class="trendPhoto">
+							<a href="https://milanstyleguide.com/blog/wedding/modnye-svadebnye-platya-i-vse-tendencii-svadebnoj-mody-2021/" class="text4">Модные свадебные платья и все тенденции свадебной моды 2021<br>
+								<p class="link4">milanstyleguide.com</p></a>
+						</div>
+						<div class="trend">
+							<img src="{% static 'img/ttt3.png' %}" alt="Photo" class="trendPhoto">
+							<a href="https://voguemoda.ru/svadebnye-platya-foto" class="text4">VOGUEMODA: Самые модные свадебные платья 2021-2022
+								<p class="link4">voguemoda.ru</p></a>
+						</div>
+						<div class="trend">
+							<img src="{% static 'img/ttt4.png' %}" alt="Photo" class="trendPhoto">
+							<a href="https://weddingblog.ru/stil/nevesta/vtoroe-svadebnoe-platye-vse-chto-nado-znat/" class="text4">Второе свадебное платье — всё, что надо знать<br>
+								<p class="link4">weddingblog.ru</p></a>
+						</div>
+					</div>
+			</div>
+		</div>
+	</section>
+
+    <!--TOP 15-->
+	<section class="top15">
+		<div class="container-fluid">
+			<h2>ТОP 15 ВЕСЕННИХ СВАДЕБНЫХ ПЛАТЬЕВ</h2>
+		<hr width="100%" color="#dbbeb6"  size="3" align="center">
+		<div class="buttons">
+			<a href="/product/" class="viewAll">СМОТРЕТЬ ВСЕ</a>
+		</div>
+		<div class="owl-carousel owl-theme">
+		  <!--1-10-->
+		    <div>
+		  		<img src="{% static 'img/p1.jpg' %}" alt="Photo" class="topPhoto">
+			  	<div class="topText">
+			  		<a href="product/16" class="nameOfDress"><p>Атласное платье на <br> бретельках с кейпом</p></a>
+			        <p class="article">Арт. NR 21010</p>
+			        <p class="price">5 750 р.</p>
+			    </div>
+	        </div>
+			<div>
+			  	<img src="{% static 'img/p2.jpg' %}" alt="Photo" class="topPhoto">
+			  	<div class="topText">
+			  		<a href="product/39" class="nameOfDress"><p>Белое свадебное платье<br> с пышным рукавом</p></a>
+			        <p class="article">Арт. NR 2207</p>
+			        <p class="price">4 650 р.</p>
+			  	</div>
+			</div>
+			<div>
+				<img src="{% static 'img/p3.jpg' %}" alt="Photo" class="topPhoto">
+			  	<div class="topText">
+			  		<a href="product/19" class="nameOfDress"><p>Платье с рукавами <br> расшитыми жемчугом</p></a>
+			        <p class="article">Арт. NR 2201</p>
+			        <p class="price">6 000 р.</p>
+			  	</div>
+			</div>
+			<div>
+				<img src="{% static 'img/p4.jpg' %}" alt="Photo" class="topPhoto">
+			  	<div class="topText">
+			  		<a href="product/20" class="nameOfDress"><p>Свадебное платье<br> со съемным болеро</p></a>
+			        <p class="article">Арт. NR 2210</p>
+			        <p class="price">4 875 р.</p>
+			  	</div>
+			</div>
+			<div>
+				<img src="{% static 'img/p5.jpg' %}" alt="Photo" class="topPhoto">
+			  	<div class="topText">
+			  		<a href="product/46" class="nameOfDress"><p>Зактытое атласное свадебное платье А-силуэта</p></a>
+			        <p class="article">Арт. NR 2212</p>
+			        <p class="price">4 000 р.</p>
+			  	</div>
+			</div>
+			<div>
+				<img src="{% static 'img/p6.jpg' %}" alt="Photo" class="topPhoto">
+			  	<div class="topText">
+			  		<a href="product/3" class="nameOfDress"><p>Сверкающее свадебное <br>платье рыбка</p></a>
+			        <p class="article">Арт. М 2021-07</p>
+			        <p class="price">5 350 р.</p>
+			  	</div>
+			</div>
+			<div>
+				<img src="{% static 'img/p7.jpg' %}" alt="Photo" class="topPhoto">
+			  	<div class="topText">
+			  		<a href="product/7" class="nameOfDress"><p>Кружевное свадебное платье<br> с закрытым верхом</p></a>
+			        <p class="article">Арт. BCL 210</p>
+			        <p class="price">3 990 р.</p>
+			  	</div>
+			</div>
+			<div>
+				<img src="{% static 'img/p8.jpg' %}" alt="Photo" class="topPhoto">
+			  	<div class="topText">
+			  		<a href="product/36" class="nameOfDress"><p>Прямое свадебное платье <br>со сборкой на бедре</p></a>
+			        <p class="article">Арт. SM-10</p>
+			        <p class="price">3 270 р.</p>
+			  	</div>
+			</div>
+			<div>
+				<img src="{% static 'img/p10.jpg' %}" alt="Photo" class="topPhoto">
+			  	<div class="topText">
+			  		<a href="product/11" class="nameOfDress"><p>Свадебное платье русалка <br>со съемным шлейфом</p></a>
+			        <p class="article">Арт. BCL 212</p>
+			        <p class="price">4 800 р.</p>
+			  	</div>
+			</div>
+			<div>
+				<img src="{% static 'img/p9.jpg' %}" alt="Photo" class="topPhoto">
+			  	<div class="topText">
+			  		<a href="product/10" class="nameOfDress"><p>Свадебное платье <br>золотого цвета</p></a>
+			        <p class="article">Арт. NR 2100</p>
+			        <p class="price">4 990 р.</p>
+			  	</div>
+			</div>
+			<div>
+				<img src="{% static 'img/p11.jpg' %}" alt="Photo" class="topPhoto">
+			  	<div class="topText">
+			  		<a href="product/2" class="nameOfDress"><p>Белое свадебное платье<br>со съемным кейпом</p></a>
+			        <p class="article">Арт. BCL 211</p>
+			        <p class="price">4 730 р.</p>
+			  	</div>
+			</div>
+			<div>
+				<img src="{% static 'img/p12.jpg' %}" alt="Photo" class="topPhoto">
+			  	<div class="topText">
+			  		<a href="product/13" class="nameOfDress"><p>Пышное свадебное платье<br>с квадратным вырезом</p></a>
+			        <p class="article">Арт. NGR 9103</p>
+			        <p class="price">3 990 р.</p>
+			  	</div>
+			</div>
+			<div>
+				<img src="{% static 'img/p13.jpg' %}" alt="Photo" class="topPhoto">
+			  	<div class="topText">
+			  		<a href="product/15" class="nameOfDress"><p>Закрытое свадебное платье<br>с объемными рукавами</p></a>
+			        <p class="article">Арт. NGR 9449</p>
+			        <p class="price">4 190 р.</p>
+			  	</div>
+			</div>
+			<div><img src="{% static 'img/p14.jpg' %}" alt="Photo" class="topPhoto">
+			  	<div class="topText">
+			  		<a href="product/14" class="nameOfDress"><p>Блестящее бежевое<br>свадебное платье</p></a>
+			        <p class="article">Арт. NR 21012</p>
+			        <p class="price">5 670 р.</p>
+			  	</div></div>
+			<div>
+				<img src="{% static 'img/p15.jpg' %}" alt="Photo" class="topPhoto">
+			  	<div class="topText">
+			  		<a href="product/34" class="nameOfDress"><p>Декольтированное свадебное платье</p></a>
+			        <p class="article">Арт. NR 2200</p>
+			        <p class="price">5 190 р.</p>
+			  	</div></div>
+		</div>
+		</div>
+	</section>
+
+	<!--СЛАЙДЕР С ОПИСАНИЕМ-->
+	<section class="slider">
+		<div class=" secondSlider">
+			<div id="sliderFade" class="carousel slide carousel-fade" data-ride="carousel">
+				<div class="carousel-indicators">
+					    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+					    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+					    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  				</div>
+			    <ol class="carousel-indicators">
+			        <li data-target="#sliderFade" data-slide-to="0" class="active"></li>
+			        <li data-target="#sliderFade" data-slide-to="1"></li>
+			        <li data-target="#sliderFade" data-slide-to="2"></li>
+			    </ol>
+			    <div class="carousel-inner">
+			        <div class="carousel-item active">
+			            <img src="{% static 'img/slider1.jpg' %}" class="d-block w-100" alt="...">
+					      	<div class="carousel-caption d-none d-md-block">
+						        <h5>Индивидуальный подход к каждому клиенту</h5>
+						        <p>Примерка осуществляется по предварительной записи в удобное для Вас время.</p>
+					    </div>
+			        </div>
+			        <div class="carousel-item">
+			            <img src="{% static 'img/slider2.jpg' %}" class="d-block w-100" alt="...">
+					      	<div class="carousel-caption d-none d-md-block">
+						        <h5>Самый большой выбор свадебных платьев в Минске</h5>
+						        <p>В нашем салоне Вы найдете платья от Итальянских, Испанских, Российских, Французских и других зарубежных модных домов.</p>
+					    </div>
+			        </div>
+			        <div class="carousel-item">
+			            <img src="{% static 'img/slider3.jpg' %}" class="d-block w-100" alt="...">
+					      	<div class="carousel-caption d-none d-md-block">
+						        <h5>Возможна аренда свадебных и вечерних платьев</h5>
+						        <p>Подробности аренды Вы можете узнать по телефону или при примерке в салоне.</p>
+					    </div>
+			        </div>
+			    </div>
+			    <a class="carousel-control-prev" href="#sliderFade" role="button" data-slide="prev">
+			        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			        <span class="sr-only"></span>
+			    </a>
+			    <a class="carousel-control-next" href="#sliderFade" role="button" data-slide="next">
+			        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			        <span class="sr-only"></span>
+			    </a>
+			</div>
+			<div class="difinition">
+				<div class="right-text">
+					<p class="rightPartName">
+					СВАДЕБНЫЙ САЛОН NICOLE В МИНСКЕ
+				</p>
+				<p class="mainTextRight">
+					Свадебный салон Nicole предлагает своим невестам свадебные платья от лучших брендов Беларуси, Испании, России,<br>Италии и США! <br><br>
+					В магазине для Вас работают ведущие стилисты-консультанты, которые подберут для Вас платье Вашей мечты, а так же все необходимые аксессуары! У нас 8 светлых больших примерочных, удаленных друг от друга, чтобы Ваш выбор был еще более комфортным!
+					Нас легко найти. Наш свадебный салон находится в центре Минска, в 5 минутах ходьбы от Академии Наук. <br><br>
+					Для бронирования примерочной с личным стилистом, в удобное для Вас время, рекомендуем записаться онлайн или по телефону.
+					Ждём Вас в нашем салоне!
+				</p>
+				<p class="moveBtn">
+					<a href="https://n527869.yclients.com/" class="btn btnMove">ПОСЕТИТЬ САЛОН</a>
+				</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--НАШИ НЕВЕСТЫ-->
+	<section class="ourBride">
+		<div class="container-fluid">
+			<div class="twoLine">
+				<hr width="37%" color="#dbbeb6"  size="3" align="left">
+				<h2>НАШИ НЕВЕСТЫ</h2>
+				<hr width="37%" color="#dbbeb6"  size="3" align="right">
+			</div>
+		</div>
+		<div class="container">
+			<div class="bridePhoto">
+				<div class="portfolio">
+					<ul class="ul">
+						<li><span class="descr"><a href="/ourBride1" class="watch">Смотреть похожие<br>платья</a></span><img class="yourPhoto" src="{% static 'img/n44.jpg' %}" alt="Photo"></li>
+						<li><span class="descr"><a href="/ourBride2" class="watch">Смотреть похожие<br>платья</a></span><img class="yourPhoto" src="{% static 'img/n55.jpg' %}" alt="Photo"></li>
+						<li><span class="descr"><a href="/ourBride3" class="watch">Смотреть похожие<br>платья</a></span><img class="yourPhoto" src="{% static 'img/n11.jpeg' %}" alt="Photo"></li>
+						<li><span class="descr"><a href="/ourBride4" class="watch">Смотреть похожие<br>платья</a></span><img class="yourPhoto" src="{% static 'img/n99.jpg' %}" alt="Photo"></li>
+					</ul>
+				</div>
+				<div class="portfolio">
+					<ul class="ul">
+						<li><span class="descr"><a href="/ourBride5" class="watch">Смотреть похожие<br>платья</a></span><img class="yourPhoto" src="{% static 'img/n1.jpeg' %}" alt="Photo"></li>
+						<li><span class="descr"><a href="/ourBride6" class="watch">Смотреть похожие<br>платья</a></span><img class="yourPhoto" src="{% static 'img/n5.jpg' %}" alt="Photo"></li>
+						<li><span class="descr"><a href="/ourBride7" class="watch">Смотреть похожие<br>платья</a></span><img class="yourPhoto" src="{% static 'img/n33.jpg' %}" alt="Photo"></li>
+						<li><span class="descr"><a href="/ourBride8" class="watch">Смотреть похожие<br>платья</a></span><img class="yourPhoto" src="{% static 'img/n66.jpg' %}" alt="Photo"></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--ОТЗЫВЫ-->
+	<section class="container">
+		<h2 class="review" style="padding-top: 40px">ОТЗЫВЫ</h2>
+		<style>
+			.prokrutka {
+			height: 600px; /* высота нашего блока */
+			width: 88%;
+			background: #fff; /* цвет фона, белый */
+			border: 1px solid #C1C1C1; /* размер и цвет границы блока */
+			overflow-y: scroll; /* прокрутка по вертикали */
+			padding: 0px 20px;
+			border-radius: 10px ;
+			margin: 0 auto;
+			}
+			</style>
+			<div class="prokrutka" style="margin-bottom: 30px">
+				<div class="reviews" style="margin-top: 0px; padding-top: 20px">
+				{% block tasks %}
+					{% if tasks %}
+						{% for el in tasks %}
+							<div class="alert alert-secondary mt-2 review-card">
+								<h3 class="review-title">{{ el.title}}</h3>
+								<p class="review-content">{{ el.task}}</p>
+							</div>
+						{% endfor %}
+					{% else %}
+					<p>Нет отзывов. Будьте первой!</p>
+					{% endif%}
+				{% endblock %}
+				<form method="post" style="margin-top: 20px;">
+					{% csrf_token %}
+					{{ form.title}}
+					{{ form.task}}
+				</form>
+			</div>
+			</div>
+			<div class="footerList"><a href="/create" class="footerText" style="background: #e2e3e5; border: 1px solid #d3d6d8; border-radius: 5px; padding: 7px 15px; margin-top: 50px; margin-left: 7.85%">Добавить отзыв</a></div>
+	</section>
+
+
+
+	<!--ФУТЕР-->
+	<footer class="footer">
+		<div class="container-fluid">
+			<h2 class="footerName">NICOLE</h2>
+			<div class="footerLeftPart">
+				<div class="footerUl">
+					<div class="ul1">
+						<div class="footerList"><a href="/product/" class="footerText">СВАДЕБНЫЕ ПЛАТЬЯ</a></div>
+						<div class="footerList"><a href="/product/even_3/" class="footerText">ВЕЧЕРНИЕ ПЛАТЬЯ</a></div>
+						<div class="footerList"><a href="/product/shoes_4/" class="footerText">СВАДЕБНАЯ ОБУВЬ</a></div>
+						<div class="footerList"><a href="/product/veil_5/" class="footerText">СВАДЕБНАЯ ФАТА</a></div>
+						<div class="footerList"><a href="/product/access_6/" class="footerText">АКСЕССУАРЫ</a></div>
+						<div class="footerList"><a href="/product/sale_2/" class="footerText">SALE</a></div>
+					</div>
+					<div class="ul2">
+						<div class="footerList"><a href="/contacts" class="footerText">КОНТАКТЫ</a></div>
+						<div class="footerList"><a href="https://weddingblog.ru/" class="footerText">БЛОГ</a></div>
+						<div class="footerList"><a href="/about" class="footerText">О САЛОНЕ</a></div>
+						<div class="footerList"><a href="/refund" class="footerText">УСЛОВИЯ ВОЗВРАТА</a></div>
+						<div class="footerList"><a href="/delivery" class="footerText">ДОСТАВКА И ОПЛАТА</a></div>
+						<div class="footerList"><a href="/create" class="footerText">ОСТАВИТЬ ОТЗЫВ</a></div>
+					</div>
+					<hr width="1" size="210" color="#282828" class="line2">
+					<div class="ul3">
+						<div class="fot">
+							<img src="{% static 'img/maps.png' %}" alt="Photo" class="footerPhoto">
+							<p>Минск Якуба Коласа, 28 <br>
+							Часы работы ПН-ВС 11.00 - 21.00</p>
+						</div>
+						<div class="fot">
+							<img src="{% static 'img/call.png' %}" alt="Photo" class="footerPhoto">
+							<p class="footerPhone">+375(17)123-45-67</p>
+						</div>
+						<div class="fot">
+							<img src="{% static 'img/metro.png' %}" alt="Photo" class="footerPhoto">
+							<p>Академия наук</p>
+						</div>
+					</div>
+					<div >
+						<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad78a01131d5dcbbe034e7468503af0a2172e75589f8312a7b9f3fbd2fa948373&amp;width=420&amp;height=210&amp;lang=ru_RU&amp;scroll=true"></script>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+	<script src="{% static 'js/jquery.js' %}"></script>
+	<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
+
+
